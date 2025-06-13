@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIA DO AMOR</title>
+    <link rel="icon" href="favicon.jpg" type="image/jpg">
+    <style>
+        body {
+            font-family: Ink-free;
+            background-color: #f7d6dc;
+            color: #333;
+            padding: 20px;
+            cursor: none; /* opcional: remove o cursor */
+        }
+        h1 {
+            color: #960000;
+        }
+        h2 {
+            color: #ff0091;
+            padding: 12px;
+        }
+        h3 {
+            color: #464646;
+            padding: 5px;
+        }
+        .love-text {
+            position: absolute;
+            font-size: 20px;
+            color: #ff0066;
+            pointer-events: none;
+            animation: fadeOut 1s ease forwards;
+            user-select: none;
+            z-index: 9999;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Feliz Dia dos Namorados à Todos os Casais❤️</h1>
+        <p><h2>Celebre o Amor em Sua Melhor Forma!</h2></p>
+        <img src="cupido.jpg" style="width:400px; border: 3px solid #a70404; border-radius: 15px; box-shadow: 4px 4px 10px rgba(0,0,0,0.3);">
+
+        <h3>O Dia dos Namorados é muito mais do que flores e chocolates — é uma data especial para celebrar o amor, o companheirismo e os pequenos gestos que fazem a diferença no dia a dia.</h3>
+        <h3>É o momento perfeito para demonstrar carinho, renovar votos e criar memórias inesquecíveis ao lado de quem faz seu coração bater mais forte.</h3>
+        <h3>Seja com um presente, um jantar romântico ou uma simples mensagem, o importante é lembrar que o amor merece ser celebrado todos os dias — mas neste, com um toque a mais de encanto.</h3>
+        <img src="flamingo.jpg" style="width:350px; border: 3px solid #a70404; border-radius: 15px; box-shadow: 4px 4px 10px rgba(0,0,0,0.3);">
+        
+    
+        
+    </center>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const text = document.createElement('div');
+            text.className = 'love-text';
+            text.textContent = 'i ❤️ you';
+            text.style.left = (e.pageX + Math.random() * 10 - 5) + 'px';
+            text.style.top = (e.pageY + Math.random() * 10 - 5) + 'px';
+            document.body.appendChild(text);
+
+            setTimeout(() => {
+                text.remove();
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
